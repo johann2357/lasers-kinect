@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
 			{
 				Vector3 spawnPosition = new Vector3 (
 					Random.Range (-spawnValues.x, spawnValues.x),
-					spawnValues.y,
+					Random.Range(0, spawnValues.y),
 					spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
 				Instantiate (hazard, spawnPosition, spawnRotation);
