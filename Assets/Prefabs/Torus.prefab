@@ -15,9 +15,11 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11404888}
+  - 114: {fileID: 11444428}
   m_Layer: 0
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Puntaje
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.853559732, y: .236733779, z: -.0953970999, w: .454194158}
   m_LocalPosition: {x: 1.18779683, y: .949999988, z: -.298304141}
-  m_LocalScale: {x: .25, y: .25, z: .25}
+  m_LocalScale: {x: .150000006, y: .150000006, z: .150000006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +85,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -158,6 +160,30 @@ MonoBehaviour:
 --- !u!1002 &11400005
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!114 &11404888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7db6f6359683b419b74e6cec6d01cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+--- !u!114 &11444428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2bfcf224c128940bd30a5f8e349156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
