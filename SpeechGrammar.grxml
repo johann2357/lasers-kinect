@@ -70,6 +70,12 @@
           <item> master </item>
         </one-of>
       </item>
+      <item>
+        <tag>PLAY</tag>
+        <one-of>
+          <item> play </item>
+        </one-of>
+      </item>
     </one-of>
   </rule>
 </grammar>
