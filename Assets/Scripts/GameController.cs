@@ -9,16 +9,20 @@ public class GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+
+	public GameObject coin;
+	public static bool gameOver = false;
 	
 	void Start ()
 	{
-		StartCoroutine (SpawnWaves ());
+		StartCoroutine (SpawnWaves (hazard));
+		StartCoroutine (SpawnWaves (coin));
 	}
-	
-	IEnumerator SpawnWaves ()
+
+	IEnumerator SpawnWaves (GameObject obj)
 	{
 		yield return new WaitForSeconds (startWait);
-		while (true)
+		while (!gameOver)
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
@@ -27,7 +31,7 @@ public class GameController : MonoBehaviour
 					Random.Range(0, spawnValues.y),
 					spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				Instantiate (obj, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait);
 			}
 			yield return new WaitForSeconds (waveWait);
