@@ -127,7 +127,7 @@ public class AvatarController : MonoBehaviour
 	// Set bones to their initial positions and rotations
 	public void ResetToInitialPosition()
 	{	
-		if(bones == null)
+		/* if(bones == null)
 			return;
 		
 		if(offsetNode != null)
@@ -164,7 +164,7 @@ public class AvatarController : MonoBehaviour
 		{
 			transform.position = initialPosition;
 			transform.rotation = initialRotation;
-		}
+		}*/
 	}
 	
 	// Invoked on the successful calibration of a player.
