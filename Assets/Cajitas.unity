@@ -3486,7 +3486,7 @@ MonoBehaviour:
   spawnValues: {x: 1, y: 1.70000005, z: 10}
   hazardCount: 5
   spawnWait: 1
-  startWait: 1
+  startWaitCoins: .5
   waveWait: 1
   coin: {fileID: 100000, guid: df572a284bf56354989eeaad0764deb8, type: 2}
 --- !u!1 &836565569
@@ -6054,7 +6054,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1414189965
@@ -8459,7 +8459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184995fd554a8f54a8ba6eafbf7baddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidoMoneda: {fileID: 8300000, guid: 398a17998a2104f4fbef98eae26f23b8, type: 3}
+  sonidoMoneda: {fileID: 8300000, guid: f218116b5fc7cc440861d16de9bddb78, type: 3}
   sonidoGolpe: {fileID: 8300000, guid: 720ac4af26d615e44934bc724706d93b, type: 3}
 --- !u!82 &1955633944
 AudioSource:
