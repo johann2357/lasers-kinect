@@ -13,6 +13,7 @@ public class ScoreController : MonoBehaviour {
 
 	public void OnCollisionEnter(Collision collision) {
 		if (collision.collider.gameObject.CompareTag ("Puntaje")) {
+			Destroy (collision.collider.gameObject);
 			score += 10;
 			scoreText.text = "SCORE: " + score.ToString ();
 		}
