@@ -8434,7 +8434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea7749b6c51548449d2a8597d71e630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageText: {fileID: 134802, guid: 86afe6bd32fa4ee478601a1cf48feac5, type: 2}
   lifeText: {fileID: 1389615647}
 --- !u!114 &1955633942
 MonoBehaviour:
