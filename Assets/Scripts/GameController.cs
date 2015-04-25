@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
-	public float startWait;
+	public float startWaitCoins;
 	public float waveWait;
 
 	public GameObject coin;
@@ -15,11 +15,11 @@ public class GameController : MonoBehaviour
 	
 	void Start ()
 	{
-		StartCoroutine (SpawnWaves (hazard));
-		StartCoroutine (SpawnWaves (coin));
+		StartCoroutine (SpawnWaves (hazard, 0.0f));
+		StartCoroutine (SpawnWaves (coin, startWaitCoins));
 	}
 
-	IEnumerator SpawnWaves (GameObject obj)
+	IEnumerator SpawnWaves (GameObject obj, float startWait)
 	{
 		yield return new WaitForSeconds (startWait);
 		while (!gameOver)

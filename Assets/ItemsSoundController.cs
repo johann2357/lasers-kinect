@@ -15,7 +15,7 @@ public class ItemsSoundController : MonoBehaviour {
 		if (collision.collider.gameObject.CompareTag ("Puntaje")) {
 			source.PlayOneShot (sonidoMoneda, 1);
 		} else {
-			source.PlayOneShot (sonidoGolpe, 1);
+			source.PlayOneShot (sonidoGolpe, 0.1f);
 		}
 			
 	}
