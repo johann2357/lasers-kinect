@@ -4,26 +4,24 @@ using UnityEngine.UI;
 
 public class PopingTextController : MonoBehaviour {
 
-	public Color color;
 	public float scrollSpeed;
 	public float life;
-	public float alfa;
 	public bool subir;
-	private Text myText;
+
+	private Text text;
 
 	void Awake() {
-		myText = GetComponent<Text> ();
+		text = GetComponent<Text> ();
 	}
 
 	// Use this for initialization
 	void Start () {
-		myText.material.color = color;
-		alfa = 1;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (alfa > 0) {
+		if (text.color.a > 0) {
 			Vector3 tempPos = transform.position;
 			if (subir) {
 				tempPos.y += scrollSpeed * Time.deltaTime;
@@ -31,10 +29,10 @@ public class PopingTextController : MonoBehaviour {
 				tempPos.y -= scrollSpeed * Time.deltaTime;
 			}
 			transform.position =  tempPos;
-			alfa -= Time.deltaTime / life;
-			Color tempColor = myText.material.color;
-			tempColor.a = alfa;
-			myText.material.color = tempColor;
+
+			Color tempColor = text.color;
+			tempColor.a -= Time.deltaTime / life;
+			text.color = tempColor;
 		} else {
 			Destroy (gameObject);
 		}

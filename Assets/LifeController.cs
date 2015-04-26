@@ -6,6 +6,7 @@ public class LifeController : MonoBehaviour {
 
 	public Text lifeText;
 	private int life = 100;
+	public Text DamageText;
 
 	void Start() {
 		lifeText.text = "LIFE: " + life.ToString ();
@@ -13,6 +14,8 @@ public class LifeController : MonoBehaviour {
 
 	public void OnCollisionEnter(Collision collision) {
 		if (collision.collider.gameObject.CompareTag ("Danino")) {
+			Text damageText = Instantiate (DamageText) as Text;
+			damageText.transform.SetParent(transform.parent.parent.Find("PointsCanvas"), false);
 			life -= 1;
 			lifeText.text = "LIFE: " + life.ToString ();
 		}
