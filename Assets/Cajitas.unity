@@ -1202,7 +1202,6 @@ GameObject:
   - 4: {fileID: 225078886}
   - 95: {fileID: 225078888}
   - 114: {fileID: 225078887}
-  - 114: {fileID: 225078889}
   m_Layer: 0
   m_Name: U_CharacterBack
   m_TagString: Untagged
@@ -1257,17 +1256,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &225078889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 225078885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86815fc68c99f234280aa16e0cd2c0cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &240523182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3477,7 @@ MonoBehaviour:
   spawnWait: 1
   startWaitCoins: .5
   waveWait: 1
+  gameTime: 3
   coin: {fileID: 100000, guid: df572a284bf56354989eeaad0764deb8, type: 2}
 --- !u!1 &836565569
 GameObject:
@@ -4111,11 +4100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .903448224, g: 1, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c5b61e793215675419218dcbf664c50a, type: 3}
     m_FontSize: 25
-    m_FontStyle: 1
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -4124,7 +4113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'Score: 100'
 --- !u!222 &915278858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8421,7 +8410,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1955633939}
   - 64: {fileID: 1955633940}
-  - 114: {fileID: 1955633941}
   - 114: {fileID: 1955633942}
   - 114: {fileID: 1955633943}
   - 82: {fileID: 1955633944}
@@ -8458,18 +8446,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300004, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
---- !u!114 &1955633941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1955633938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea7749b6c51548449d2a8597d71e630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageText: {fileID: 11451012, guid: 86afe6bd32fa4ee478601a1cf48feac5, type: 2}
 --- !u!114 &1955633942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8482,7 +8458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 915278857}
-  DeltaScoreText: {fileID: 11447318, guid: 553924e03d4ef884a9c2db34615ae1a0, type: 2}
+  positiveScoreText: {fileID: 11447318, guid: 553924e03d4ef884a9c2db34615ae1a0, type: 2}
+  negativeScoreText: {fileID: 11451012, guid: 86afe6bd32fa4ee478601a1cf48feac5, type: 2}
 --- !u!114 &1955633943
 MonoBehaviour:
   m_ObjectHideFlags: 0

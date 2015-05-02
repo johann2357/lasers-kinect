@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 	{
 		StartCoroutine (SpawnWaves (hazard, 0.0f));
 		StartCoroutine (SpawnWaves (coin, startWaitCoins));
+		StartCoroutine (CountGameTime ());
 	}
 
 	IEnumerator CountGameTime () {
