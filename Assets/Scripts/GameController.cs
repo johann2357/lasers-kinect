@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
 
 	public GameObject coin;
 	public static bool gameOver = false;
+	public static int score = 0;
 	
 	void Start ()
 	{
