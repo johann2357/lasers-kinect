@@ -33,11 +33,11 @@ public class ScoreController : MonoBehaviour {
 			GameController.score -= 10;
 		}
 		updateScore ();
-
 	}
 
 	private void updateScore() {
 		// Show score on top-right corcer
 		scoreText.text = "SCORE: " + GameController.score.ToString ();
 	}
+
 }
