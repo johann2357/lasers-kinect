@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWaitCoins;
 	public float waveWait;
+	public float gameTime;
 
 	public GameObject coin;
 	public static bool gameOver = false;
@@ -18,6 +19,11 @@ public class GameController : MonoBehaviour
 	{
 		StartCoroutine (SpawnWaves (hazard, 0.0f));
 		StartCoroutine (SpawnWaves (coin, startWaitCoins));
+	}
+
+	IEnumerator CountGameTime () {
+		yield return new WaitForSeconds (gameTime);
+		gameOver = true;
 	}
 
 	IEnumerator SpawnWaves (GameObject obj, float startWait)

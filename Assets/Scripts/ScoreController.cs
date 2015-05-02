@@ -5,17 +5,19 @@ using UnityEngine.UI;
 public class ScoreController : MonoBehaviour {
 
 	public Text scoreText;
-	public Text DeltaScoreText;
+	public Text positiveScoreText;
+	public Text negativeScoreText;
 
 	void Start() {
-		scoreText.text = "SCORE: " + GameController.score.ToString ();
+		updateScore ();
 	}
 
 	public void OnCollisionEnter(Collision collision) {
 		if (collision.collider.gameObject.CompareTag ("Puntaje")) {
 			// Show DeltaScoreText
-			Text deltaScoreText = Instantiate (DeltaScoreText) as Text;
+			Text deltaScoreText = Instantiate (positiveScoreText) as Text;
 			deltaScoreText.transform.SetParent(transform.parent.parent.Find("PointsCanvas"), false);
+			deltaScoreText.text = "+50";
 		
 			// Destroy coin
 			Destroy (collision.collider.gameObject);
@@ -23,6 +25,12 @@ public class ScoreController : MonoBehaviour {
 			// Update score
 			GameController.score += 50;
 
+		} else if (collision.collider.gameObject.CompareTag ("Danino")) {
+			Text deltaScoreText = Instantiate (negativeScoreText) as Text;
+			deltaScoreText.transform.SetParent(transform.parent.parent.Find("PointsCanvas"), false);
+			deltaScoreText.text = "-10";
+
+			GameController.score -= 10;
 		}
 		updateScore ();
 
