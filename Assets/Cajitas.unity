@@ -8678,7 +8678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMoneda: {fileID: 8300000, guid: f218116b5fc7cc440861d16de9bddb78, type: 3}
+  volumenMoneda: 10
   sonidoGolpe: {fileID: 8300000, guid: 720ac4af26d615e44934bc724706d93b, type: 3}
+  volumenGolpe: 1
   sonidoReloj: {fileID: 8300000, guid: 0938df6d80302b6469bb2edbbe18b048, type: 3}
   sonidoFin: {fileID: 8300000, guid: 2485b80490ba7654587fb86e0f182940, type: 3}
 --- !u!82 &1955633944

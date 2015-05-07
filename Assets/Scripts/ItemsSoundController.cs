@@ -4,7 +4,9 @@ using System.Collections;
 public class ItemsSoundController : MonoBehaviour {
 
 	public AudioClip sonidoMoneda;
+	public float volumenMoneda = 1;
 	public AudioClip sonidoGolpe;
+	public float volumenGolpe = 1;
 	public AudioClip sonidoReloj;
 	public AudioClip sonidoFin;
 	private AudioSource source;
@@ -15,9 +17,9 @@ public class ItemsSoundController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		if (collision.collider.gameObject.CompareTag ("Puntaje")) {
-			source.PlayOneShot (sonidoMoneda, 1);
+			source.PlayOneShot (sonidoMoneda, volumenMoneda);
 		} else {
-			source.PlayOneShot (sonidoGolpe, 0.1f);
+			source.PlayOneShot (sonidoGolpe, volumenGolpe);
 		}
 	}
 
