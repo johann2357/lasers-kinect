@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWaitCoins;
 	public float waveWait;
-	public static float gameTime = 10;
+	public static float gameTime = 20;
 
 	public GameObject coin;
 	public static bool gameOver = false;
@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
 			gameTime -= 0.1f;
 			yield return new WaitForSeconds (0.1f);
 		}
+		gameTime = 0f;
 		gameOver = true;
 	}
 

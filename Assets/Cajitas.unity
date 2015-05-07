@@ -3731,6 +3731,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872188874}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &882100511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 882100514}
+  - 222: {fileID: 882100513}
+  - 114: {fileID: 882100512}
+  m_Layer: 5
+  m_Name: FinalScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &882100512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882100511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: .172413826, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c5b61e793215675419218dcbf664c50a, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &882100513
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882100511}
+--- !u!224 &882100514
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882100511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1645063697}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &886210441
 GameObject:
   m_ObjectHideFlags: 0
@@ -7453,6 +7519,7 @@ RectTransform:
   m_Children:
   - {fileID: 915278856}
   - {fileID: 1908991452}
+  - {fileID: 882100514}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
@@ -8410,7 +8477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1908991451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d513f4a3a2046d4abab3014c5cbfae5, type: 3}
+  m_Script: {fileID: 11500000, guid: b0eeb44191f40b34fbdabf9006b5fc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1908991453}
@@ -8598,6 +8665,7 @@ MonoBehaviour:
   scoreText: {fileID: 915278857}
   positiveScoreText: {fileID: 11447318, guid: 553924e03d4ef884a9c2db34615ae1a0, type: 2}
   negativeScoreText: {fileID: 11451012, guid: 86afe6bd32fa4ee478601a1cf48feac5, type: 2}
+  finalScoreText: {fileID: 882100512}
 --- !u!114 &1955633943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8611,6 +8679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonidoMoneda: {fileID: 8300000, guid: f218116b5fc7cc440861d16de9bddb78, type: 3}
   sonidoGolpe: {fileID: 8300000, guid: 720ac4af26d615e44934bc724706d93b, type: 3}
+  sonidoReloj: {fileID: 8300000, guid: 0938df6d80302b6469bb2edbbe18b048, type: 3}
+  sonidoFin: {fileID: 8300000, guid: 2485b80490ba7654587fb86e0f182940, type: 3}
 --- !u!82 &1955633944
 AudioSource:
   m_ObjectHideFlags: 0

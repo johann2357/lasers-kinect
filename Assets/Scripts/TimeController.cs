@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class TimeController : MonoBehaviour {
 	public Text timeText;
+	public static float timeWarning = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,13 @@ public class TimeController : MonoBehaviour {
 
 	private void updateTime() {
 		// Show score on top-right corcer
-		timeText.text = "Time: " + GameController.gameTime.ToString ("0.0");
+		if (!GameController.gameOver) {
+			timeText.text = "Time: " + GameController.gameTime.ToString ("0.0");
+			if (GameController.gameTime < timeWarning) {
+				timeText.color = Color.red;
+			}
+		} else {
+			timeText.text = "";
+		}
 	}
 }
