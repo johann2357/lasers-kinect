@@ -8,6 +8,9 @@ public class ScoreController : MonoBehaviour {
 	public Text positiveScoreText;
 	public Text negativeScoreText;
 	public Text finalScoreText;
+	public float damageInterval;
+
+	private float nextDamage = Time.time;
 
 	void Start() {
 		updateScore ();
@@ -44,12 +47,15 @@ public class ScoreController : MonoBehaviour {
 			// Update score
 			GameController.score += 50;
 
-		} else if (collision.collider.gameObject.CompareTag ("Danino")) {
+		} else if (collision.collider.gameObject.CompareTag ("Danino") && Time.time > nextDamage) {
+			collision.collider.gameObject.tag = "Untagged";
+
 			Text deltaScoreText = Instantiate (negativeScoreText) as Text;
 			deltaScoreText.transform.SetParent(transform.parent.parent.Find("PointsCanvas"), false);
 			deltaScoreText.text = "-10";
-
 			GameController.score -= 10;
+
+			nextDamage = Time.time + damageInterval;
 		}
 		updateScore ();
 	}
