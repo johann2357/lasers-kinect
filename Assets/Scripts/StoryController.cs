@@ -29,7 +29,9 @@ public class StoryController : MonoBehaviour {
 			//FadeIn ();
 			yield return new WaitForSeconds (showItemTime);
 		}
+		//Destroy (gameObject);
 		Application.LoadLevel("Cajitas");
+
 		//FadeOut ();
 	}
 

@@ -10,11 +10,12 @@ public class ScoreController : MonoBehaviour {
 	public Text finalScoreText;
 	public float damageInterval;
 
-	private float nextDamage = Time.time;
+	private float nextDamage;
 
 	void Start() {
 		updateScore ();
 		StartCoroutine (CheckIfEnd ());
+		nextDamage = Time.time;
 	}
 
 	IEnumerator CheckIfEnd ()
