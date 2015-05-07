@@ -30,7 +30,7 @@ public class VoiceRecognitionUI : MonoBehaviour {
 				print (sPhraseTag);
 				if (sPhraseTag=="PLAY")
 				{
-					Application.LoadLevel("Cajitas");
+					Application.LoadLevel("Historia");
 					Destroy(gameObject);
 				}
 
